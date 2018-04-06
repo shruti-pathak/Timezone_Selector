@@ -1,0 +1,47 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.2/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
+
+<div class="app">
+</div>
+
+<script>
+new Vue({
+    el: '.app',
+    template: `
+        <div>
+        <span> Time-Zone : </span>
+             <select v-model="selectedZone">
+                <option v-for="zone in zones">{{zone.name}}</option>
+            </select>
+            <h4>Selected Time-Zone Name: {{selectedZone}}</div>
+        </div>
+    `,
+    data: {
+        zones: [
+            { name: "(UTC -12:00) Etc/GMT+12"},
+            { name: "(UTC -11:00) Etc/GMT+11"},
+            { name: "(UTC -11:00) Pacific/Samoa"},
+            { name: "(UTC -11:00) Pacific/Pago_Pago"},
+            {name: "(UTC -10:00) Pacific/Rarotonga"},
+            {name: "(UTC -10:00) US/Hawaii"},
+            {name: "(UTC -10:00) Pacific/Honolulu"},
+            {name: "(UTC -08:00) Etc/GMT+8"},
+            { name: "(UTC -11:00) Pacific/Pago_Pago"},
+            { name: "(UTC -11:00) Pacific/Pago_Pago"},
+            { name: "(UTC -11:00) Pacific/Pago_Pago"},
+            { name: "(UTC -11:00) Pacific/Pago_Pago"},
+            { name: "(UTC -11:00) Pacific/Pago_Pago"},
+            { name: "(UTC -11:00) Pacific/Pago_Pago"}
+            
+        ],
+        selectedZone: ""
+    }
+});
+</script>
+
+<style>
+body {
+  margin: 20px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+</style>
